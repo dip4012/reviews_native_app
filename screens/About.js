@@ -1,10 +1,9 @@
 import { StyleSheet, Text, View } from "react-native"
-import Home from "./screens/Home"
 
-export default function App() {
+export default function About() {
 	return (
 		<View style={styles.container}>
-			<Home />
+			<Text>About Page</Text>
 		</View>
 	)
 }
@@ -12,8 +11,7 @@ export default function App() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: "#fff",
+		padding: 24,
 		justifyContent: "center",
-		alignItems: "center",
 	},
 })
