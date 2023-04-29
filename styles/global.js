@@ -14,11 +14,17 @@ export const globalStyles = StyleSheet.create({
 		lineHeight: 20,
 	},
 	input: {
+		width: "100%",
 		borderWidth: 1,
 		borderColor: "darkred",
 		borderRadius: 15,
 		padding: 10,
-		marginBottom: 10,
+		marginBottom: 5,
+	},
+	errorText: {
+		marginLeft: 10,
+		marginBottom: 12,
+		color: "red",
 	},
 })
 

@@ -91,6 +91,7 @@ const styles = StyleSheet.create({
 		padding: 16,
 		color: "white",
 		borderRadius: 50,
+		elevation: 10,
 	},
 	modalContent: {
 		flex: 1,

@@ -43,8 +43,16 @@ export default function App() {
 							headerShown: false,
 						}}
 					>
-						<RootDrawer.Screen name="Home" component={HomeStack} />
-						<RootDrawer.Screen name="About" component={AboutStack} />
+						<RootDrawer.Screen
+							name="HomeStack"
+							component={HomeStack}
+							options={{ title: "Home" }}
+						/>
+						<RootDrawer.Screen
+							name="AboutStack"
+							component={AboutStack}
+							options={{ title: "About" }}
+						/>
 					</RootDrawer.Navigator>
 				</NavigationContainer>
 			</View>
