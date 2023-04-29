@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from "react-native"
-import { globalStyles } from "../styles/global"
+import { Image, StyleSheet, Text, View } from "react-native"
+import { globalStyles, images } from "../styles/global"
 import Card from "../shared/Card"
 
 export default function ReviewDetails({ route }) {
@@ -8,7 +8,7 @@ export default function ReviewDetails({ route }) {
 		<View style={globalStyles.container}>
 			<Card>
 				<Text style={globalStyles.titleText}>{item.title}</Text>
-				<Text style={globalStyles.titleText}>{item.rating}</Text>
+				<Image source={images.ratings[item.rating]} />
 				<Text style={globalStyles.titleText}>{item.body}</Text>
 			</Card>
 		</View>

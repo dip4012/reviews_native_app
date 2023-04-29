@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native"
+import { Image, ImageBackground, StyleSheet, Text, View } from "react-native"
 import { MaterialIcons } from "@expo/vector-icons"
 
 export default function Header({ title, navigation }) {
@@ -14,7 +14,11 @@ export default function Header({ title, navigation }) {
 				onPress={openDrawerHandler}
 				style={styles.icon}
 			/>
-			<View>
+			<View style={styles.headerTitle}>
+				<Image
+					source={require("../assets/heart_logo.png")}
+					style={styles.headerImage}
+				/>
 				<Text style={styles.headerText}>{title}</Text>
 			</View>
 		</View>
@@ -40,8 +44,20 @@ const styles = StyleSheet.create({
 	},
 	icon: {
 		position: "absolute",
-		left: 16,
-		top: 34,
+		top: 33,
+		left: 20,
 		color: "white",
+		zIndex: 100,
+	},
+	headerTitle: {
+		flex: 1,
+		flexDirection: "row",
+		justifyContent: "center",
+		alignItems: "center",
+	},
+	headerImage: {
+		width: 18,
+		height: 18,
+		marginRight: 6,
 	},
 })

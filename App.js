@@ -1,5 +1,11 @@
 import "react-native-gesture-handler"
-import { StyleSheet, Text, View } from "react-native"
+import {
+	Keyboard,
+	StyleSheet,
+	Text,
+	TouchableWithoutFeedback,
+	View,
+} from "react-native"
 import About from "./screens/About"
 import { useFonts } from "expo-font"
 import { useCallback } from "react"
@@ -29,18 +35,20 @@ export default function App() {
 	if (!fontsLoaded) return null
 
 	return (
-		<View style={styles.rootContainer} onLayout={onLayoutRootView}>
-			<NavigationContainer>
-				<RootDrawer.Navigator
-					screenOptions={{
-						headerShown: false,
-					}}
-				>
-					<RootDrawer.Screen name="Home" component={HomeStack} />
-					<RootDrawer.Screen name="About" component={AboutStack} />
-				</RootDrawer.Navigator>
-			</NavigationContainer>
-		</View>
+		<TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+			<View style={styles.rootContainer} onLayout={onLayoutRootView}>
+				<NavigationContainer>
+					<RootDrawer.Navigator
+						screenOptions={{
+							headerShown: false,
+						}}
+					>
+						<RootDrawer.Screen name="Home" component={HomeStack} />
+						<RootDrawer.Screen name="About" component={AboutStack} />
+					</RootDrawer.Navigator>
+				</NavigationContainer>
+			</View>
+		</TouchableWithoutFeedback>
 	)
 }
 
